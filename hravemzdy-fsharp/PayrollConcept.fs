@@ -39,4 +39,4 @@ type PayrollConcept(c, n, cc) =
     member x.InitValuesDecimal(values : Map<string, Object>, key : string) : decimal = 
         match values.TryFind(key) with
         | None -> 0M
-        | _  -> PayrollGlobal.GetDecimalOrZeroValue(values.[key])
+        | Some(a)  -> PayrollGlobal.GetDecimalOrZeroValue(a)
