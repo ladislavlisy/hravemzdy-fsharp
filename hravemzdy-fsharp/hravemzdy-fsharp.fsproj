@@ -32,23 +32,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
-    <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
+    <Reference Include="FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Component1.fs" />
-    <Compile Include="CoreItems\CodeNameRefer.fs" />
-    <Compile Include="CoreItems\PayrollPeriod.fs" />
-    <Compile Include="CoreItems\TagRefer.fs" />
-    <Compile Include="CoreItems\PayrollTag.fs" />
-    <Compile Include="CoreItems\PayrollResult.fs" />
-    <Compile Include="CoreItems\PayrollName.fs" />
-    <Compile Include="CoreItems\PayrollConcept.fs" />
+    <Compile Include="TagRefer.fs" />
+    <Compile Include="CodeNameRefer.fs">
+      <DependentUpon>TagRefer.fs</DependentUpon>
+    </Compile>
+    <Compile Include="PayNameConstants.fs" />
+    <Compile Include="UnknownName.fs" />
+    <Compile Include="PayTagConstants.fs" />
+    <Compile Include="PayConceptConstants.fs" />
+    <Compile Include="UnknownConcept.fs" />
+    <Compile Include="GlobalPayrollFunction.fs" />
+    <Compile Include="PayrollName.fs" />
+    <Compile Include="PayrollConcept.fs" />
+    <Compile Include="SalaryMonthlyConcept.fs" />
+    <Compile Include="PayrollResult.fs" />
+    <Compile Include="PayrollTag.fs" />
+    <Compile Include="UnknownTag.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
   <ItemGroup>

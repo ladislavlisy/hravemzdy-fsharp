@@ -1,0 +1,66 @@
+﻿namespace PayrollLibrary
+
+type PayTags = 
+    | TAG_UNKNOWN = 0u
+    | TAG_SCHEDULE_WORK = 10001u
+    | TAG_SCHEDULE_TERM = 10002u
+    | TAG_TIMESHEET_PERIOD = 10003u
+    | TAG_TIMESHEET_WORK = 10004u
+    | TAG_HOURS_WORKING = 10005u
+    | TAG_HOURS_ABSENCE = 10006u
+    | TAG_SALARY_BASE = 10101u
+    | TAG_TAX_INCOME_BASE = 30001u
+    | TAG_INSURANCE_HEALTH_BASE = 30002u
+    | TAG_INSURANCE_SOCIAL_BASE = 30003u
+    | TAG_INSURANCE_HEALTH = 30005u
+    | TAG_INSURANCE_SOCIAL = 30006u
+    | TAG_SAVINGS_PENSIONS = 30007u
+    | TAG_TAX_EMPLOYERS_HEALTH = 30008u
+    | TAG_TAX_EMPLOYERS_SOCIAL = 30009u
+    | TAG_TAX_CLAIM_PAYER = 30010u
+    | TAG_TAX_CLAIM_DISABILITY = 30011u
+    | TAG_TAX_CLAIM_STUDYING = 30014u
+    | TAG_TAX_CLAIM_CHILD = 30019u
+    | TAG_TAX_RELIEF_PAYER = 30020u
+    | TAG_TAX_RELIEF_CHILD = 30029u
+    | TAG_TAX_ADVANCE_BASE = 30030u
+    | TAG_TAX_ADVANCE = 30031u
+    | TAG_TAX_BONUS_CHILD = 30033u
+    | TAG_TAX_ADVANCE_FINAL = 30034u
+    | TAG_TAX_WITHHOLD_BASE = 30035u
+    | TAG_TAX_WITHHOLD = 30036u
+    | TAG_INCOME_GROSS = 90001u
+    | TAG_INCOME_NETTO = 90002u
+
+[<Class>]
+type PayTagRefs() = 
+    static member REF_UNKNOWN with get() = new CodeNameRefer(uint32 PayTags.TAG_UNKNOWN, PayTags.TAG_UNKNOWN.ToString())
+    static member REF_SCHEDULE_TERM with get() = new CodeNameRefer(uint32 PayTags.TAG_SCHEDULE_TERM, PayTags.TAG_SCHEDULE_TERM.ToString())
+    static member REF_TIMESHEET_PERIOD with get() = new CodeNameRefer(uint32 PayTags.TAG_TIMESHEET_PERIOD, PayTags.TAG_TIMESHEET_PERIOD.ToString())
+    static member REF_TIMESHEET_WORK with get() = new CodeNameRefer(uint32 PayTags.TAG_TIMESHEET_WORK, PayTags.TAG_TIMESHEET_WORK.ToString())
+    static member REF_HOURS_WORKING with get() = new CodeNameRefer(uint32 PayTags.TAG_HOURS_WORKING, PayTags.TAG_HOURS_WORKING.ToString())
+    static member REF_HOURS_ABSENCE with get() = new CodeNameRefer(uint32 PayTags.TAG_HOURS_ABSENCE, PayTags.TAG_HOURS_ABSENCE.ToString())
+    static member REF_SALARY_BASE with get() = new CodeNameRefer(uint32 PayTags.TAG_SALARY_BASE, PayTags.TAG_SALARY_BASE.ToString())
+    static member REF_TAX_INCOME_BASE with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_INCOME_BASE, PayTags.TAG_TAX_INCOME_BASE.ToString())
+    static member REF_INSURANCE_HEALTH_BASE with get() = new CodeNameRefer(uint32 PayTags.TAG_INSURANCE_HEALTH_BASE, PayTags.TAG_INSURANCE_HEALTH_BASE.ToString())
+    static member REF_INSURANCE_SOCIAL_BASE with get() = new CodeNameRefer(uint32 PayTags.TAG_INSURANCE_SOCIAL_BASE, PayTags.TAG_INSURANCE_SOCIAL_BASE.ToString())
+    static member REF_INSURANCE_HEALTH with get() = new CodeNameRefer(uint32 PayTags.TAG_INSURANCE_HEALTH, PayTags.TAG_INSURANCE_HEALTH.ToString())
+    static member REF_INSURANCE_SOCIAL with get() = new CodeNameRefer(uint32 PayTags.TAG_INSURANCE_SOCIAL, PayTags.TAG_INSURANCE_SOCIAL.ToString())
+    static member REF_SAVINGS_PENSIONS with get() = new CodeNameRefer(uint32 PayTags.TAG_SAVINGS_PENSIONS, PayTags.TAG_SAVINGS_PENSIONS.ToString())
+    static member REF_TAX_EMPLOYERS_HEALTH with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_EMPLOYERS_HEALTH, PayTags.TAG_TAX_EMPLOYERS_HEALTH.ToString())
+    static member REF_TAX_EMPLOYERS_SOCIAL with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_EMPLOYERS_SOCIAL, PayTags.TAG_TAX_EMPLOYERS_SOCIAL.ToString())
+    static member REF_TAX_CLAIM_PAYER with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_CLAIM_PAYER, PayTags.TAG_TAX_CLAIM_PAYER.ToString())
+    static member REF_TAX_CLAIM_DISABILITY with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_CLAIM_DISABILITY, PayTags.TAG_TAX_CLAIM_DISABILITY.ToString())
+    static member REF_TAX_CLAIM_STUDYING with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_CLAIM_STUDYING, PayTags.TAG_TAX_CLAIM_STUDYING.ToString())
+    static member REF_TAX_CLAIM_CHILD with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_CLAIM_CHILD, PayTags.TAG_TAX_CLAIM_CHILD.ToString())
+    static member REF_TAX_RELIEF_PAYER with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_RELIEF_PAYER, PayTags.TAG_TAX_RELIEF_PAYER.ToString())
+    static member REF_TAX_RELIEF_CHILD with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_RELIEF_CHILD, PayTags.TAG_TAX_RELIEF_CHILD.ToString())
+    static member REF_TAX_ADVANCE_BASE with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_ADVANCE_BASE, PayTags.TAG_TAX_ADVANCE_BASE.ToString())
+    static member REF_TAX_ADVANCE with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_ADVANCE, PayTags.TAG_TAX_ADVANCE.ToString())
+    static member REF_TAX_BONUS_CHILD with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_BONUS_CHILD, PayTags.TAG_TAX_BONUS_CHILD.ToString())
+    static member REF_TAX_ADVANCE_FINAL with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_ADVANCE_FINAL, PayTags.TAG_TAX_ADVANCE_FINAL.ToString())
+    static member REF_TAX_WITHHOLD_BASE with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_WITHHOLD_BASE, PayTags.TAG_TAX_WITHHOLD_BASE.ToString())
+    static member REF_TAX_WITHHOLD with get() = new CodeNameRefer(uint32 PayTags.TAG_TAX_WITHHOLD, PayTags.TAG_TAX_WITHHOLD.ToString())
+    static member REF_INCOME_GROSS with get() = new CodeNameRefer(uint32 PayTags.TAG_INCOME_GROSS, PayTags.TAG_INCOME_GROSS.ToString())
+    static member REF_INCOME_NETTO with get() = new CodeNameRefer(uint32 PayTags.TAG_INCOME_NETTO, PayTags.TAG_INCOME_NETTO.ToString())
+
